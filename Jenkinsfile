@@ -26,7 +26,10 @@ pipeline {
         }
         stage('Deploy') { 
             steps {
-                sh 'cp gameoflife-web/target/*.war /home/ec2-user/apache-tomcat-8.5.63/webapps' 
+                sh '''
+                cp gameoflife-web/target/*.war /home/ec2-user/apache-tomcat-8.5.63/webapps
+                /home/ec2-user/apache-tomcat-8.5.63/bin/.shutdown.sh
+                /home/ec2-user/apache-tomcat-8.5.63/bin/sstartup.sh''' 
             }
         }    
     }
