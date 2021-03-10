@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'aws-node' }
+    agent { label 'linux-node' }
     triggers {
         pollSCM 'H * * * *'
     }
