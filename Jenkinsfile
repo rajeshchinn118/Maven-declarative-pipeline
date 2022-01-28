@@ -1,5 +1,8 @@
 pipeline {
     agent { label 'rhel-node' }
+    tools {
+    maven 'maven3.8.4'
+    }
     triggers {
         pollSCM 'H * * * *'
     }
