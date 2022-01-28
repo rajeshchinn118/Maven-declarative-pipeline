@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'aws-node' }
+    agent { label 'rhel-node' }
     triggers {
         pollSCM 'H * * * *'
     }
