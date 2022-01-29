@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('clone') {
             steps {
-                git 'https://github.com/devopsdesk/game-of-life.git'
+                git 'https://github.com/daticahealth/java-tomcat-maven-example.git'
             }
         }
         stage('Build') {
