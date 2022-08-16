@@ -17,9 +17,9 @@ pipeline {
                 sh 'mvn -B -DskipTests clean package'
             }
         }
-        stage('Test') { 
+        stage('archive artifacts') { 
             steps {
-                sh 'mvn test' 
+                archiveArtifacts artifacts: '**/target/*.war', followSymlinks: false 
             }
             
         }
